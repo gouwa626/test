@@ -60,21 +60,21 @@ export default {
   },
   methods: {
     onclick(elem, sel) {
-      elem.oncli = !elem.oncli;
+      elem.oncli = !elem.oncli
       if (elem.oncli) {
-        sel.push(elem.content);
+        sel.push(elem.content)
       } else {
         //找到取消的元素  删除
         for (let i = sel.length - 1; i >= 0; i--) {
-          let index = sel[i];
+          let index = sel[i]
           if (index == elem.content) {
-            sel.splice(i, 1);
+            sel.splice(i, 1)
           }
         }
       }
       // bus.$emit('red', sel);
     },
-    addred() {
+    addred () {
       for (let i = 1; i < 34; i++) {
         this.red_ball.push({
           content: i,
@@ -82,7 +82,7 @@ export default {
         })
       }
     },
-    addblue() {
+    addblue () {
       for (let i = 1; i < 17; i++) {
         this.blue_ball.push({
           content: i,
@@ -90,7 +90,7 @@ export default {
         })
       }
     },
-    qink() {
+    qink () {
       for (let i = 0; i < this.red_ball.length; i++) {
         if (this.red_ball[i].oncli) {
           this.red_ball[i].oncli = false
@@ -101,12 +101,12 @@ export default {
           this.blue_ball[i].oncli = false
         }
       }
-      this.sel_red = [];
-      this.sel_blue = [];
+      this.sel_red = []
+      this.sel_blue = []
     }
   },
   computed: {
-    sel_ball: function() {
+    sel_ball () {
       if (this.sel_red.length >= 6) {
         if (this.sel_blue.length >= 1) {
           return this.sel_blue.length + '注' + this.sel_blue.length * 2 + '元'
@@ -118,59 +118,55 @@ export default {
 }
 </script>
 
-<style lang="css">
-.d1 ul li{
-  list-style: none;
-  width: 9%;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  margin: 2% 2%;
-}
-.d1 li>span{
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 15px;
-}
-.d1 ul{
-  display: flex;
-  flex-wrap: wrap;
-}
-.d2 li span{
-    border: 1px solid red;
-}
-.d3 li span{
-    border: 1px solid blue;
-}
-.cli{
-  background-color: red;
-  color: #f2f2f2;
-}
-.cli_blue{
-  background-color: blue;
-  color: #f2f2f2;
-}
-.footer{
-    position: fixed;
-    height: 50px;
-    line-height: 50px;
-    display: flex;
-    text-align: center;
-    background:#373b47;
-    color: #ffffff;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-.footer .f-bet{
-      flex:1;
-}
-.footer .f-right{
-    flex:0 0 105px;
-    width: 105px;
-    background: #f21c0f;
-}
+<style lang="stylus">
+.d1
+  ul li
+    list-style: none
+    width 9%
+    height 30px
+    line-height 30px
+    text-align center
+    margin 2% 2%
+  li>span
+    display block
+    width 30px
+    height 30px
+    line-height 30px
+    text-align center
+    border-radius 15px
+.d1 ul
+  display flex
+  flex-wrap wrap
+
+.d2 li span
+    border 1px solid red
+
+.d3 li span
+    border 1px solid blue
+
+.cli
+  background-color red
+  color #f2f2f2
+
+.cli_blue
+  background-color blue
+  color #f2f2f2
+.footer
+    position fixed
+    height 50px
+    line-height 50px
+    display flex
+    text-align center
+    background #373b47
+    color #ffffff
+    bottom  0
+    left 0
+    right 0
+    .f-bet
+      flex 1
+    .f-right
+      flex 0 0 105px
+      width 105px
+      background #f21c0f
+
 </style>

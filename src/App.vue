@@ -2,8 +2,8 @@
 <div id="app">
   <router-link :to="{ path: '/Test'}">测试页</router-link>
   <router-view name="test"></router-view>
-  <!-- <router-view name="test"></router-view> -->
-  <!-- <router-view name="tbale"></router-view> -->
+  <router-link :to="{ name: 'HelloWorld', params: {} }"></router-link>
+  <router-view></router-view>
 </div>
 </template>
 

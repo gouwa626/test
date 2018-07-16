@@ -9,7 +9,6 @@ function resolve (dir) {
 }
 
 const createLintingRule = () => ({
-  //空格报错故先注释掉
   // test: /\.(js|vue)$/,
   // loader: 'eslint-loader',
   // enforce: 'pre',
@@ -75,6 +74,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /.(eot|woff|ttf)$/,
+        loader: 'url-loader'
       }
     ]
   },

@@ -4,6 +4,7 @@
   <router-view name="test"></router-view>
   <router-link :to="{ name: 'HelloWorld', params: {} }"></router-link>
   <router-view></router-view>
+  <div> chang  two</div>
 </div>
 </template>
 

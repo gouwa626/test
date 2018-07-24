@@ -4,13 +4,13 @@
   <router-view name="test"></router-view>
   <router-link :to="{ name: 'HelloWorld', params: {} }"></router-link>
   <router-view></router-view>
-<<<<<<< HEAD
+
   <div>one添加修改</div>
   <div>one添加修改</div>
-=======
+
   <div> chang  two</div>
   <p></p>
->>>>>>> f2ea387eb20d01dda8c211562706f7b958d8ad8f
+
 </div>
 </template>
 

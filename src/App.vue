@@ -4,6 +4,7 @@
   <router-view name="test"></router-view>
   <router-link :to="{ name: 'HelloWorld', params: {} }"></router-link>
   <router-view></router-view>
+  <div>one添加</div>
 </div>
 </template>
 

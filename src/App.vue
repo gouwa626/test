@@ -5,6 +5,7 @@
   <router-link :to="{ name: 'HelloWorld', params: {} }"></router-link>
   <router-view></router-view>
   <div> chang  two</div>
+  <p></p>
 </div>
 </template>
 
